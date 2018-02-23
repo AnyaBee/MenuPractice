@@ -1,0 +1,117 @@
+a {
+    text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+
+    background-color: #ffffff;
+    font-family: Arial,sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    color: #414243;
+}
+
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.navigation li {
+    flex-basis: auto;
+    position: relative;
+}
+
+.navigation a{
+    display: block;
+    color: #414243;
+    padding: 25px 35px 15px 30px;
+}
+
+.navigation li:hover a.main-menu-link {
+    color: #e30613;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px -5px 5px 0px rgba(76, 76, 76, 0.1);
+    -moz-box-shadow:    0px -5px 5px 0px rgba(76, 76, 76, 0.1);
+    box-shadow:         0px -5px 5px 0px rgba(76, 76, 76, 0.1);
+}
+
+.navigation li:active a.main-menu-link {
+    color: #e30613;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px -5px 5px 0px rgba(76, 76, 76, 0.1);
+    -moz-box-shadow:    0px -5px 5px 0px rgba(76, 76, 76, 0.1);
+    box-shadow:         0px -5px 5px 0px rgba(76, 76, 76, 0.1);
+}
+
+.nav-level-two {
+    position: absolute;
+    display: block;
+    min-width: 320px;
+    color: #ffffff;
+    border-bottom: 3px solid #414141;
+    padding: 40px 20px 30px 35px;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(76, 76, 76, 0.1);
+    -moz-box-shadow:    0px 0px 10px 5px rgba(76, 76, 76, 0.1);
+    box-shadow:         0px 0px 10px 5px rgba(76, 76, 76, 0.1);
+}
+
+
+.nav-level-two li {
+   padding-bottom: 10px;
+}
+
+li.shop-address,
+li.check-status,
+li.buyer-info {
+    display: none;
+}
+
+.nav-level-two {
+    display: none;
+}
+
+.navigation li:hover .nav-level-two {
+    display: block;
+}
+/*
+
+.navigation li:hover .temporary {
+    display: block;
+}
+
+ .temporary {
+    display: block;
+}
+*/
+.nav-level-two a {
+    padding: 0;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+a.additional-link {
+    color: #297db7;
+}

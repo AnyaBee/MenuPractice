@@ -36,6 +36,8 @@ body {
     display: flex;
     justify-content: space-around;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .navigation li {
@@ -58,6 +60,7 @@ body {
 }
 
 .navigation li:active a.main-menu-link {
+    position: relative;
     color: #e30613;
     background-color: #ffffff;
     -webkit-box-shadow: 0px -5px 5px 0px rgba(76, 76, 76, 0.1);
@@ -66,6 +69,8 @@ body {
 }
 
 .nav-level-two {
+    margin: 0;
+    padding: 0;
     position: absolute;
     display: block;
     min-width: 320px;
@@ -75,6 +80,8 @@ body {
     -webkit-box-shadow: 0px 0px 10px 5px rgba(76, 76, 76, 0.1);
     -moz-box-shadow:    0px 0px 10px 5px rgba(76, 76, 76, 0.1);
     box-shadow:         0px 0px 10px 5px rgba(76, 76, 76, 0.1);
+
+
 }
 
 
@@ -89,14 +96,14 @@ li.buyer-info {
 }
 
 .nav-level-two {
-    display: none;
+    visibility: hidden;
 }
 
 .navigation li:hover .nav-level-two {
-    display: block;
+    visibility: visible;
 }
-/*
 
+/*
 .navigation li:hover .temporary {
     display: block;
 }
@@ -114,4 +121,62 @@ li.buyer-info {
 
 a.additional-link {
     color: #297db7;
+}
+
+a.sublist-header {
+    font-size: 18px;
+    line-height: 18px;
+    color: #297db7;
+    margin-bottom: 10px;
+}
+/*
+.nav-wrapper .nav-level-two {
+    display: flex;
+    position: absolute;
+    top: 54px;
+    left: -68px;
+}
+*/
+
+.nav-level-two {
+    display: flex;
+    position: absolute;
+    top: 54px;
+    left: 0;
+    min-width: 320px;
+}
+
+.nav-gadgets {
+    left: -68px;
+}
+
+.nav-flex {
+    flex-direction: column;
+}
+/*
+.nav-level-two li {
+    width: 180px;
+}
+*/
+.nav-level-two li:first-of-type {
+   width: 225px;
+}
+
+.nav-level-three {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-level-three::after {
+    content: "";
+    border-right: 1px solid #e6e6e6;
+    top: 35px;
+    bottom: 20px;
+    right: 35px;
+    width: 1px;
+    position: absolute;
+}
+
+.last ul:last-of-type::after {
+    border: none;
 }

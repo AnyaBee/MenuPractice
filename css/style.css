@@ -35,6 +35,7 @@ body {
 .navigation {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -69,10 +70,10 @@ body {
 }
 
 .nav-level-two {
+    flex-wrap: nowrap;
     margin: 0;
     padding: 0;
     position: absolute;
-    display: block;
     min-width: 320px;
     color: #ffffff;
     border-bottom: 3px solid #414141;
@@ -80,13 +81,12 @@ body {
     -webkit-box-shadow: 0px 0px 10px 5px rgba(76, 76, 76, 0.1);
     -moz-box-shadow:    0px 0px 10px 5px rgba(76, 76, 76, 0.1);
     box-shadow:         0px 0px 10px 5px rgba(76, 76, 76, 0.1);
-
-
 }
 
 
 .nav-level-two li {
-   padding-bottom: 10px;
+    width: 160px;
+    padding-bottom: 10px;
 }
 
 li.shop-address,
@@ -153,11 +153,7 @@ a.sublist-header {
 .nav-flex {
     flex-direction: column;
 }
-/*
-.nav-level-two li {
-    width: 180px;
-}
-*/
+
 .nav-level-two li:first-of-type {
    width: 225px;
 }
@@ -179,4 +175,62 @@ a.sublist-header {
 
 .last ul:last-of-type::after {
     border: none;
+}
+
+.visible-mobile-only {
+   display: none;
+}
+
+.phone-level-two {
+    visibility: visible;
+    padding-bottom: 70px;
+}
+
+.nav-level-two .promo-block {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: black;
+}
+
+.bottom-block {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+}
+
+.bottom-block::before {
+    position: absolute;
+    border-top: 1px solid #e6e6e6;
+    content: "";
+    left: 30px;
+    right: 40px;
+    top: -10px;
+}
+
+.phone-promo {
+    width: 200px;
+}
+
+.promo {
+    width: 330px;
+    margin-left: auto;
+}
+.nav-border::after {
+    bottom: 55px;
+}
+
+.phone-promo .apple,
+.phone-promo .android {
+    font-size: 18px;
+    color: #297db7;
+}
+.phone-promo .apple {
+    background-image: url("../img/apple.svg");
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: 26px 30px;
 }

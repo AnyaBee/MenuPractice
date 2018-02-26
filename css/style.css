@@ -306,4 +306,145 @@ a.sublist-header {
     .visible-mobile-only {
         display: block;
     }
+    /*burger menu styles*/
+    .visually-hidden:not(:focus):not(:active) {
+        position: absolute;
+
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+
+        white-space: nowrap;
+
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+    .main-nav {
+        position: relative;
+
+        width: 100%;
+        min-height: 51px;
+        margin: 0 auto;
+
+        background-color: #826550;
+    }
+    .main-nav-toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+
+        display: block;
+        width: 70px;
+        height: 50px;
+
+        background-color: #6a4d38;
+
+        cursor: pointer;
+        border: none;
+    }
+    .main-nav-toggle:hover,
+    .main-nav-toggle:active {
+        background-color: #624530;
+    }
+    .main-nav-closed .main-nav-toggle::before {
+        content: "";
+
+        position: absolute;
+        top: 15px;
+        left: 17px;
+
+        width: 36px;
+        height: 2px;
+
+        background-color: #ffffff;
+        box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+    }
+
+    .main-nav-closed .main-nav-toggle:active::before {
+        background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
+    }
+    .main-nav-opened .main-nav-toggle {
+        top: 0;
+        right: 0;
+        left: auto;
+    }
+    .main-nav-opened .main-nav-toggle::before,
+    .main-nav-opened .main-nav-toggle::after {
+         content: "";
+         position: absolute;
+         top: 24px;
+         left: 18px;
+         width: 36px;
+         height: 2px;
+         background-color: #ffffff;
+ }
+    .main-nav-opened .main-nav-toggle::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+    }
+
+    .main-nav-opened .main-nav-toggle::after {
+        transform: rotate(-45deg);
+    }
+    .main-nav-opened .main-nav-toggle:active::before,
+    .main-nav-opened .main-nav-toggle:active::after {
+     background-color: rgba(255, 255, 255, 0.3);
+    }
+    /*Добавляем стили ссылкам в меню. Не забываем про стилизацию ссылок в активном состоянии и в состоянии наведения.*/
+    .main-nav-closed .list-item {
+        display: none;
+    }
+    .main-nav {
+        position: relative;
+
+        width: 100%;
+        min-height: 51px;
+        margin: 0 auto;
+
+        background-color: #826550;
+    }
+
+    .main-nav-toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+
+        display: block;
+        width: 70px;
+        height: 50px;
+
+        background-color: #6a4d38;
+
+        cursor: pointer;
+        border: none;
+    }
+    .main-nav-toggle:hover,
+    .main-nav-toggle:active {
+        background-color: #624530;
+    }
+    .main-nav-nojs .main-nav-toggle {
+        display: none;
+    }
+    .main-nav-nojs .main-nav-wrapper {
+        position: static;
+        min-height: 0;
+    }
+
+    .main-nav-nojs .list-item {
+        display: block;
+    }
+
+    .main-nav-nojs .list-item-active a {
+        padding-right: 21px;
+        padding-left: 21px;
+        text-align: left;
+    }
 }
+
+

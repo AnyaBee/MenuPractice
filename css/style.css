@@ -5,10 +5,12 @@ a {
 *,
 *::before,
 *::after {
+    -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
 
 html {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -32,7 +34,10 @@ body {
 }
 
 .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     list-style: none;
     padding: 0;
@@ -40,6 +45,7 @@ body {
 }
 
 .navigation li {
+    -ms-flex-preferred-size: auto;
     flex-basis: auto;
     position: relative;
 }
@@ -57,7 +63,6 @@ body {
     color: #e30613;
     background-color: #ffffff;
     -webkit-box-shadow: 0px -5px 5px 0px rgba(76, 76, 76, 0.1);
-    -moz-box-shadow:    0px -5px 5px 0px rgba(76, 76, 76, 0.1);
     box-shadow:         0px -5px 5px 0px rgba(76, 76, 76, 0.1);
 }
 
@@ -72,7 +77,6 @@ body {
     border-bottom: 3px solid #414141;
     padding: 40px 20px 30px 35px;
     -webkit-box-shadow: 0px 0px 10px 5px rgba(76, 76, 76, 0.1);
-    -moz-box-shadow:    0px 0px 10px 5px rgba(76, 76, 76, 0.1);
     box-shadow:         0px 0px 10px 5px rgba(76, 76, 76, 0.1);
 }
 
@@ -109,6 +113,8 @@ body {
 }
 
 .nav-level-two {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: absolute;
     top: 54px;
@@ -121,6 +127,9 @@ body {
 }
 
 .nav-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
@@ -164,7 +173,11 @@ body {
 }
 
 .bottom-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
     align-items: baseline;
     padding-top: 20px;
     padding-bottom: 10px;
@@ -182,11 +195,14 @@ body {
 
 .phone-promo {
     width: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-
 }
 
 .promo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 390px;
     margin-left: auto;
@@ -208,7 +224,11 @@ body {
 }
 
 .phone-promo a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -219,7 +239,11 @@ body {
 
 .promo a {
     width: 125px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -309,6 +333,9 @@ body {
     }
 
     .navigation {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -325,6 +352,7 @@ body {
         border: 0;
         padding: 0;
         white-space: nowrap;
+        -webkit-clip-path: inset(100%);
         clip-path: inset(100%);
         clip: rect(0 0 0 0);
         overflow: hidden;
@@ -364,11 +392,13 @@ body {
         width: 36px;
         height: 2px;
         background-color: #e30611;
+        -webkit-box-shadow: 0 8px 0 0 #e30611, 0 16px 0 0 #e30611;
         box-shadow: 0 8px 0 0 #e30611, 0 16px 0 0 #e30611;
     }
 
     .main-nav-closed .main-nav-toggle:active::before {
         background-color: rgba(255, 255, 255, 0.3);
+        -webkit-box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
         box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
     }
 
@@ -390,11 +420,16 @@ body {
     }
 
     .main-nav-opened .main-nav-toggle::before {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
         transform: rotate(45deg);
+        -webkit-box-shadow: none;
         box-shadow: none;
     }
 
     .main-nav-opened .main-nav-toggle::after {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
         transform: rotate(-45deg);
     }
 
@@ -464,7 +499,6 @@ body {
         padding-top: 0;
         padding-bottom: 0;
         -webkit-box-shadow: none;
-        -moz-box-shadow:    none;
         box-shadow:        none;
     }
 
@@ -485,7 +519,6 @@ body {
     .navigation li:active a.main-menu-link {
         background-color: #fafafa;
         -webkit-box-shadow: none;
-        -moz-box-shadow:    none;
         box-shadow:         none;
     }
 
@@ -595,5 +628,3 @@ body {
         font-family: Arial, sans-serif;
     }
 }
-
-

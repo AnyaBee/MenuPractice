@@ -82,12 +82,6 @@ body {
     padding-bottom: 10px;
 }
 
-li.shop-address,
-li.check-status,
-li.buyer-info {
-    display: none;
-}
-
 .nav-level-two {
     visibility: hidden;
 }
@@ -134,7 +128,7 @@ a.sublist-header {
 }
 
 .nav-level-two li:first-of-type {
-   width: 225px;
+    width: 225px;
 }
 
 .nav-level-three {
@@ -157,7 +151,7 @@ a.sublist-header {
 }
 
 .visible-mobile-only {
-   display: none;
+    display: none;
 }
 
 .phone-level-two {
@@ -170,7 +164,6 @@ a.sublist-header {
     left: 0;
     right: 0;
     width: 100%;
-    color: black;
 }
 
 .bottom-block {
@@ -220,20 +213,20 @@ a.sublist-header {
 .phone-promo a:hover {
     color: #e30611;
 }
-    /*
-    .phone-promo .apple::before {
-        position: absolute;
-        top: 5px;
-        left: 35px;
-        width: 26px;
-        height: 30px;
-        content: "";
-        background-image: url("../img/apple.svg");
-        background-repeat: no-repeat;
-        background-position: 0% 50%;
-        background-size: 26px 30px;
-    }
-    */
+/*
+.phone-promo .apple::before {
+    position: absolute;
+    top: 5px;
+    left: 35px;
+    width: 26px;
+    height: 30px;
+    content: "";
+    background-image: url("../img/apple.svg");
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: 26px 30px;
+}
+*/
 .phone-promo a {
     display: flex;
     align-items: center;
@@ -400,14 +393,14 @@ a.sublist-header {
     }
     .main-nav-opened .main-nav-toggle::before,
     .main-nav-opened .main-nav-toggle::after {
-         content: "";
-         position: absolute;
-         top: 24px;
-         left: 18px;
-         width: 36px;
-         height: 2px;
-         background-color: #e30611;
- }
+        content: "";
+        position: absolute;
+        top: 24px;
+        left: 18px;
+        width: 36px;
+        height: 2px;
+        background-color: #e30611;
+    }
     .main-nav-opened .main-nav-toggle::before {
         transform: rotate(45deg);
         box-shadow: none;
@@ -418,7 +411,7 @@ a.sublist-header {
     }
     .main-nav-opened .main-nav-toggle:active::before,
     .main-nav-opened .main-nav-toggle:active::after {
-     background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.3);
     }
     /*Добавляем стили ссылкам в меню. Не забываем про стилизацию ссылок в активном состоянии и в состоянии наведения.*/
     .main-nav-closed .list-item {
@@ -477,9 +470,16 @@ a.sublist-header {
     .nav-level-two {
         position: static;
         display: none;
+        border-bottom: none;
+        padding-top: 0;
+        padding-bottom: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow:    none;
+        box-shadow:        none;
     }
 
-    .navigation li.hover .nav-level-two {
+    .navigation li.hover .nav-level-two,
+    .navigation li:active .nav-level-two {
         display: block;
     }
 
@@ -487,7 +487,9 @@ a.sublist-header {
         font-size: 14px;
         line-height: 14px;
         padding: 8px 20px 8px 20px;
+        color: #414243;
     }
+
     .list-item::after {
         content: "";
         position: absolute;
@@ -496,6 +498,7 @@ a.sublist-header {
         bottom: 0;
         border-bottom: 1px solid #e6e6e6;
     }
+
     .navigation li.hover a.main-menu-link,
     .navigation li:active a.main-menu-link {
         background-color: #fafafa;
@@ -503,13 +506,82 @@ a.sublist-header {
         -moz-box-shadow:    none;
         box-shadow:         none;
     }
+
     .promo-block {
         display: none;
     }
+
+    .nav-level-two li {
+        width: auto;
+        padding: 0;
+        border-bottom: none;
+    }
+
     .nav-level-two a:hover,
     .nav-level-two a:active {
         color: #e30611;
-        text-decoration: ;
+        text-decoration: none;
+    }
+
+    .nav-level-two li:first-of-type {
+        width: auto;
+    }
+
+    .nav-level-two li::before {
+        content: "";
+        position: absolute;
+        left: -10px;
+        right: 20px;
+        top: 0;
+        border-top: 1px dotted #e6e6e6;
+    }
+
+    .main-menu-link {
+        position: relative;
+    }
+
+    .list-item .main-menu-link::before {
+        position: absolute;
+        content: "";
+        background: url(../img/icon-drop-down.png) no-repeat;
+        top: 10px;
+        right: 20px;
+        width: 10px;
+        height: 6px;
+    }
+
+    .list-item .main-menu-link:hover:before {
+        display: none;
+    }
+
+    .list-item .main-menu-link::after {
+        display: none;
+        position: absolute;
+        content: "";
+        background: url(../img/icon-drop-down-open.png) no-repeat;
+        top: 10px;
+        right: 20px;
+        width: 10px;
+        height: 6px;
+    }
+
+    .list-item .main-menu-link:hover::after {
+        display: block;
+    }
+
+    .android-image-link svg,
+    .apple-image-link svg {
+        position: absolute;
+        left: -10px;
+        top: 4px;
+        width: 19px;
+        height: 22px;
+        fill: #adb8c1;
+    }
+
+    .apple-image-link svg {
+        width: 20px;
+        height: 23px;
     }
 }
 

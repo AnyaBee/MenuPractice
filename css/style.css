@@ -19,7 +19,7 @@ img {
 body {
 
     background-color: #ffffff;
-    font-family: Arial,sans-serif;
+    font-family: Arial, sans-serif;
     font-weight: normal;
     font-size: 18px;
     line-height: 20px;
@@ -96,11 +96,12 @@ body {
     line-height: 18px;
 }
 
-.additional-link {
+.nav-level-two .additional-link,
+.nav-level-three .additional-link {
     color: #297db7;
 }
 
-.sublist-header {
+.nav-level-two .sublist-header {
     font-size: 18px;
     line-height: 18px;
     color: #297db7;
@@ -576,12 +577,22 @@ body {
 
     }
 
-    .sublist-header {
+    .nav-level-two .sublist-header {
         margin-bottom: 0;
+        color: #414243;
+        font-size: 14px;
+        line-height: 14px;
     }
+
     .propositions .link-with-image {
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+
+    .nav-level-two .additional-link {
+        color: #414243;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
     }
 }
 

@@ -473,6 +473,7 @@ body {
     }
 
     .navigation a {
+        display: block;
         padding: 15px 20px 15px 20px;
         font-size: 14px;
         line-height: 14px;

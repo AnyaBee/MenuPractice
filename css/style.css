@@ -44,7 +44,7 @@ body {
     position: relative;
 }
 
-.navigation a{
+.navigation a {
     display: block;
     color: #414243;
     padding: 25px 35px 15px 30px;
@@ -61,8 +61,8 @@ body {
     box-shadow:         0px -5px 5px 0px rgba(76, 76, 76, 0.1);
 }
 
-
 .nav-level-two {
+    visibility: hidden;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -76,14 +76,13 @@ body {
     box-shadow:         0px 0px 10px 5px rgba(76, 76, 76, 0.1);
 }
 
-
 .nav-level-two li {
     width: 160px;
     padding-bottom: 10px;
 }
 
-.nav-level-two {
-    visibility: hidden;
+.nav-level-two li:first-of-type {
+    width: 225px;
 }
 
 .navigation li.hover .nav-level-two {
@@ -97,11 +96,11 @@ body {
     line-height: 18px;
 }
 
-a.additional-link {
+.additional-link {
     color: #297db7;
 }
 
-a.sublist-header {
+.sublist-header {
     font-size: 18px;
     line-height: 18px;
     color: #297db7;
@@ -123,12 +122,9 @@ a.sublist-header {
 .nav-flex {
     flex-direction: column;
 }
+
 .nav-flex li {
     width: 255px;
-}
-
-.nav-level-two li:first-of-type {
-    width: 225px;
 }
 
 .nav-level-three {
@@ -210,36 +206,20 @@ a.sublist-header {
     margin-right: 15px;
 }
 
-.phone-promo a:hover {
-    color: #e30611;
-}
-/*
-.phone-promo .apple::before {
-    position: absolute;
-    top: 5px;
-    left: 35px;
-    width: 26px;
-    height: 30px;
-    content: "";
-    background-image: url("../img/apple.svg");
-    background-repeat: no-repeat;
-    background-position: 0% 50%;
-    background-size: 26px 30px;
-}
-*/
 .phone-promo a {
     display: flex;
     align-items: center;
+}
+
+.phone-promo a:hover,
+.promo a:hover {
+    color: #e30611;
 }
 
 .promo a {
     width: 125px;
     display: flex;
     align-items: center;
-}
-
-.promo a:hover {
-    color: #e30611;
 }
 
 .best-sales {
@@ -313,71 +293,75 @@ a.sublist-header {
     text-decoration: none;
 }
 
-@media (max-width: 767px) {
+.main-nav-toggle {
+    display: none;
+}
+
+.main-menu-link img {
+    display: none;
+}
+
+@media (max-width: 930px) {
     .nav-block {
         background-color: #ffffff;
         min-height: 50px;
     }
+
     .navigation {
         flex-direction: column;
     }
+
     .visible-mobile-only {
         display: block;
     }
+
     /*burger menu button behavior styles*/
     .visually-hidden:not(:focus):not(:active) {
         position: absolute;
-
         width: 1px;
         height: 1px;
         margin: -1px;
         border: 0;
         padding: 0;
-
         white-space: nowrap;
-
         clip-path: inset(100%);
         clip: rect(0 0 0 0);
         overflow: hidden;
     }
+
     .main-nav {
         position: relative;
-
-        max-width: 767px;
+        max-width: 930px;
         min-height: 51px;
         margin: 0 auto;
-
         background-color: #ffffff;
     }
+
     .main-nav-toggle {
         position: absolute;
         top: 0;
         right: 0;
         z-index: 2;
-
         display: block;
         width: 70px;
         height: 50px;
-
         background-color: #ffffff;
-
         cursor: pointer;
         border: none;
     }
+
     .main-nav-toggle:hover,
     .main-nav-toggle:active {
         background-color: #fafafa;
     }
+
     .main-nav-closed .main-nav-toggle::before {
         content: "";
-
         position: absolute;
         top: 15px;
         left: 17px;
-
         width: 36px;
         height: 2px;
-
         background-color: #e30611;
         box-shadow: 0 8px 0 0 #e30611, 0 16px 0 0 #e30611;
     }
@@ -386,11 +370,13 @@ a.sublist-header {
         background-color: rgba(255, 255, 255, 0.3);
         box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
     }
+
     .main-nav-opened .main-nav-toggle {
         top: 0;
         right: 0;
         left: auto;
     }
+
     .main-nav-opened .main-nav-toggle::before,
     .main-nav-opened .main-nav-toggle::after {
         content: "";
@@ -401,6 +387,7 @@ a.sublist-header {
         height: 2px;
         background-color: #e30611;
     }
+
     .main-nav-opened .main-nav-toggle::before {
         transform: rotate(45deg);
         box-shadow: none;
@@ -409,21 +396,21 @@ a.sublist-header {
     .main-nav-opened .main-nav-toggle::after {
         transform: rotate(-45deg);
     }
+
     .main-nav-opened .main-nav-toggle:active::before,
     .main-nav-opened .main-nav-toggle:active::after {
         background-color: rgba(255, 255, 255, 0.3);
     }
-    /*Добавляем стили ссылкам в меню. Не забываем про стилизацию ссылок в активном состоянии и в состоянии наведения.*/
+
     .main-nav-closed .list-item {
         display: none;
     }
+
     .main-nav {
         position: relative;
-
         width: 100%;
         min-height: 51px;
         margin: 0 auto;
-
         background-color: #ffffff;
     }
 
@@ -432,23 +419,23 @@ a.sublist-header {
         top: 0;
         right: 0;
         z-index: 2;
-
         display: block;
         width: 70px;
         height: 50px;
-
         background-color: #ffffff;
-
         cursor: pointer;
         border: none;
     }
+
     .main-nav-toggle:hover,
     .main-nav-toggle:active {
         background-color: #ffffff;
     }
+
     .main-nav-nojs .main-nav-toggle {
         display: none;
     }
+
     .main-nav-nojs .main-nav-wrapper {
         position: static;
         min-height: 0;
@@ -463,10 +450,12 @@ a.sublist-header {
         padding-left: 21px;
         text-align: left;
     }
-    /*menu positioning*/
+
+    /*menu adjustments*/
     .nav-level-three {
         display: none;
     }
+
     .nav-level-two {
         position: static;
         display: none;
@@ -484,19 +473,10 @@ a.sublist-header {
     }
 
     .navigation a {
+        padding: 15px 20px 15px 20px;
         font-size: 14px;
         line-height: 14px;
-        padding: 8px 20px 8px 20px;
         color: #414243;
-    }
-
-    .list-item::after {
-        content: "";
-        position: absolute;
-        left: 20px;
-        right: 20px;
-        bottom: 0;
-        border-bottom: 1px solid #e6e6e6;
     }
 
     .navigation li.hover a.main-menu-link,
@@ -531,7 +511,7 @@ a.sublist-header {
         content: "";
         position: absolute;
         left: -10px;
-        right: 20px;
+        right: 0;
         top: 0;
         border-top: 1px dotted #e6e6e6;
     }
@@ -540,40 +520,44 @@ a.sublist-header {
         position: relative;
     }
 
-    .list-item .main-menu-link::before {
+    .list-item::after {
+        content: "";
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 0;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .has-drop-down .main-menu-link:before {
         position: absolute;
         content: "";
         background: url(../img/icon-drop-down.png) no-repeat;
-        top: 10px;
+        top: 15px;
         right: 20px;
         width: 10px;
         height: 6px;
     }
 
-    .list-item .main-menu-link:hover:before {
+    .hover .main-menu-link:before {
         display: none;
     }
 
-    .list-item .main-menu-link::after {
-        display: none;
+    .hover.has-drop-down .main-menu-link:after {
         position: absolute;
         content: "";
         background: url(../img/icon-drop-down-open.png) no-repeat;
-        top: 10px;
+        top: 15px;
         right: 20px;
         width: 10px;
         height: 6px;
-    }
-
-    .list-item .main-menu-link:hover::after {
-        display: block;
     }
 
     .android-image-link svg,
     .apple-image-link svg {
         position: absolute;
         left: -10px;
-        top: 4px;
+        top: 10px;
         width: 19px;
         height: 22px;
         fill: #adb8c1;
@@ -582,6 +566,21 @@ a.sublist-header {
     .apple-image-link svg {
         width: 20px;
         height: 23px;
+    }
+
+    .main-menu-link img {
+        display: inline;
+        vertical-align: middle;
+        margin-right: 10px;
+
+    }
+
+    .sublist-header {
+        margin-bottom: 0;
+    }
+    .propositions .link-with-image {
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 

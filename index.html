@@ -275,12 +275,12 @@
                             <a class="main-menu-link" href="#">Тарифы и услуги</a>
                         </li>
                         <li class="propositions list-item">
-                            <a class="main-menu-link" href="#">
+                            <a class="main-menu-link link-with-image" href="#">
                                 <img src="img/propositions_icon.png" width="22" height="22" alt="propositions icon">
                                 Акции</a>
                         </li>
                         <li class="visible-mobile-only list-item">
-                            <a class="main-menu-link" href="#">
+                            <a class="main-menu-link link-with-image" href="#">
                                 <img src="img/shop-icon.png" width="22" height="22" alt="shop icon">
                                 Адреса магазинов</a>
                         </li>
@@ -295,21 +295,11 @@
             </nav>
         </header>
     </div>
-    <script>
-        var navMain = document.querySelector('.main-nav');
-        var navToggle = document.querySelector('.main-nav-toggle');
-
-        navMain.classList.remove('main-nav-nojs');
-
-        navToggle.addEventListener('click', function() {
-            if (navMain.classList.contains('main-nav-closed')) {
-                navMain.classList.remove('main-nav-closed');
-                navMain.classList.add('main-nav-opened');
-            } else {
-                navMain.classList.add('main-nav-closed');
-                navMain.classList.remove('main-nav-opened');
-            }
-        });
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script type="text/javascript">
+        window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js"><\/script>')
     </script>
+    <script type="text/javascript" src="js/jquery.main.js" defer></script>
+    <script type="text/javascript" src="js/menu.js"></script>
 </body>
 </html>

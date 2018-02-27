@@ -1,5 +1,6 @@
 jQuery(window).on('load', function() {
     initTouchNav();
+    initDropDownClasses();
 });
 
 
@@ -9,6 +10,19 @@ function initTouchNav() {
         new TouchNav({
             navBlock: this
         });
+    });
+}
+
+// add classes if item has dropdown
+function initDropDownClasses() {
+    jQuery('#nav .list-item').each(function() {
+        var item = jQuery(this);
+        var drop = item.find('ul');
+        var link = item.find('a').eq(0);
+        if (drop.length) {
+            item.addClass('has-drop-down');
+            if (link.length) link.addClass('has-drop-down-a');
+        }
     });
 }
 

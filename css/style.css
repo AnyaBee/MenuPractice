@@ -12,6 +12,7 @@ a {
 html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    height: 100%;
 }
 
 img {
@@ -26,6 +27,7 @@ body {
     font-size: 18px;
     line-height: 20px;
     color: #414243;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -607,7 +609,6 @@ body {
         display: inline;
         vertical-align: middle;
         margin-right: 10px;
-
     }
 
     .nav-level-two .sublist-header {
@@ -626,5 +627,10 @@ body {
         color: #414243;
         font-size: 14px;
         font-family: Arial, sans-serif;
+    }
+
+    .navigation li.hover a.main-menu-link,
+    .navigation li:active a.main-menu-link {
+        z-index: auto;
     }
 }
